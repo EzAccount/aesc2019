@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{amsthm}
+\usepackage{mathtext}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{wrapfig}
+\graphicspath{ {images/} }
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{fancyhdr}
+\usepackage[a4paper]{geometry}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Когомологии де Рама.}
+\theoremstyle{definition}
+\newtheorem{defn}{Def}
+\newtheorem{example}{Ex}
+ \newtheorem{theorem}{Th}
+ \DeclareMathOperator{\im}{im}
+\begin{document}
+	[Савченко 5.5.5, 19.01]\textit{Баллон вместимостью 50 литров наполнили воздухом при 27\degree С до давления 10 МПа. Какой объем воды можно вытеснить из цистерны подводной лодки воздухом этого баллона, если вытеснение производится на глубине 40 метров? Температура воздуха после расширения 3\degree С.}
+	
+	Уравнение состояния для воздуха в баллоне до выпускания воздуха:
+	$$P V = \nu RT$$
+	После выпускания части воздуха:
+	$$P_1 V = \nu_1 RT$$
+	В цистерне с водой:
+	$$P_2 V_{выт} = \nu_2 R T_{к}$$
+	где $\nu_1 + \nu_2 = \nu$. 
+	Условие равновесия: $$P_1 = P_2 = P_{атм} + \rho_{в} g h$$
+	Выражая $V_{выт}$:
+	$$V_{выт} = V \frac{\nu_2 T_к}{\nu_1 T} = V (\frac{\nu}{\nu_1} - 1) \frac{T_к}{T}$$
+	\[
+	V_{выт}=\boxed{V\left( \frac{P}{P_{атм}+\rho_в g h} - 1 \right) \frac{T_к}{T}}
+	\]
+	Численный ответ - $874$ литра.
+	
+\end{document}
